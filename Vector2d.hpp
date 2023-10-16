@@ -11,6 +11,25 @@ class Vector2d {
     Vector2d(double x = 0, double y = 0) : x(x), y(y) {};
     friend std::ostream& operator<<(std::ostream& os, const Vector2d& v);
 
+    Vector2d operator++() {
+      x++; y++;
+      return *this;
+    }
+    Vector2d operator++(int dummy) {
+      Vector2d v = *this;
+      x++; y++;
+      return v;
+    }
+    Vector2d operator--() {
+      x--; y--;
+      return *this;
+    }
+    Vector2d operator--(int dummy) {
+      Vector2d v = *this;
+      x--; y--;
+      return v;
+    }
+
     Vector2d operator+(const Vector2d& v) { return Vector2d(x + v.x, y + v.y); }
     int operator*(const Vector2d& v) { return x * v.x + y * v.y; }
 
