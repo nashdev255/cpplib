@@ -9,9 +9,9 @@ int main(int numberOfArgs, char* argv[]) {
   Vector2d v2(3, 4);
   Vector2d v;
 
-  v = v1 + v2;
+  int a = v1 * v2;
 
-  std::cout << v << std::endl;
+  std::cout << a << std::endl;
 
   return 0;
 }

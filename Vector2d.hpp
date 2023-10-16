@@ -10,9 +10,9 @@ class Vector2d {
   public:
     Vector2d(double x = 0, double y = 0) : x(x), y(y) {};
     friend std::ostream& operator<<(std::ostream& os, const Vector2d& v);
-
-    // 和差
+    
     Vector2d operator+(const Vector2d& v) { return Vector2d(x + v.x, y + v.y); }
+    int operator*(const Vector2d& v) { return x * v.x + y * v.y; }
 };
 
 std::ostream& operator<<(std::ostream& os, const Vector2d& v) {
