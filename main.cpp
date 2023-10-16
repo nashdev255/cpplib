@@ -1,7 +1,6 @@
 #ifndef MAIN_CPP
-#define MAIN
+#define MAIN_CPP
 
-#include <iostream>
 #include "Vector2d.hpp"
 
 int main(int numberOfArgs, char* argv[]) {
