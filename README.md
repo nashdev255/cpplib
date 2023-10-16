@@ -17,7 +17,7 @@ int main(int argc, char* argv[]) {
   v = 2 * v1 + (-v2) * (+v1 * v2)
   v--;
 
-  std::cout << v << std::endl;
+  std::cout << v << std::endl; // (-51, -67)
 
   return 0;
 }
