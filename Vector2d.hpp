@@ -1,3 +1,9 @@
+/**
+ * @name Vector2d.hpp
+ * @author nashdev255
+ * @version 0.0.1
+*/
+
 #ifndef VECTOR2D_HPP
 #define VECTOR2D_HPP
 
