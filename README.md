@@ -6,7 +6,7 @@
 
 ### Vector2d
 - [Vector2d](./Vector2d.hpp) : Library for 2-dimensional Vector.
-```:C++
+```cpp:main.cpp
 /* usage */
 int main(int argc, char* argv[]) {
   Vector2d v1(1, 2);
