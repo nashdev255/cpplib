@@ -144,6 +144,7 @@ class Vector2 {
     Vector2<T> operator-() { return Vector2<T>(-x, -y); }
 
     bool operator==(const Vector2& v) { return ( x == v.x && y == v.y ); }
+    bool operator!=(const Vector2& v) { return !( x == v.x && y == v.y ); }
 
 };
 
