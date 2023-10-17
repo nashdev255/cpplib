@@ -130,30 +130,67 @@ class Vector2 {
 
     /**
      * [usage]
+     * Vector<int> v1(1, 2);
+     * Vector<int> v2(3, 4);
+     * v = v1 + v2;
+     * std::cout << v << std::endl; // (4, 6)
+     * 
     */
     Vector2<T> operator+(const Vector2<T>& v) { return Vector2<T>(x + v.x, y + v.y); }
 
     /**
      * [usage]
+     * Vector<int> v1(1, 2);
+     * Vector<int> v2(3, 4);
+     * v = v1 - v2;
+     * std::cout << v << std::endl; // (-2, -2)
+     * 
     */
     Vector2<T> operator-(const Vector2<T>& v) { return Vector2<T>(x - v.x, y - v.y); }
 
     /**
      * [usage]
+     * Vector<int> v1(1, 2);
+     * Vector<int> v2(3, 4);
+     * int dotProduct = v1 * v2;
+     * std::cout << dotProduct << std::endl; // 11
+     * 
     */
     T operator*(const Vector2<T>& v) { return x * v.x + y * v.y; }
 
     /**
      * [usage]
+     * Vector<int> v1(1, 2);
+     * Vector<int> v = +v1;
+     * std::cout << v << std::endl; // (1, 2)
+     * 
     */
     Vector2<T> operator+() { return Vector2<T>(x, y); }
 
     /**
      * [usage]
+     * Vector<int> v1(1, 2);
+     * Vector<int> v = +v1;
+     * std::cout << v << std::endl; // (-1, -2)
+     * 
     */
     Vector2<T> operator-() { return Vector2<T>(-x, -y); }
 
+    /**
+     * [usege]
+     * Vector<int> v1(1, 2);
+     * Vector<int> v2(1, 2);
+     * std::cout << (v1 == v2) << std::endl; // 1
+     * 
+    */
     bool operator==(const Vector2<T>& v) { return ( x == v.x && y == v.y ); }
+
+    /**
+     * [usage]
+     * Vector<int> v1(1, 2);
+     * Vector<int> v2(1, 2);
+     * std::cout << (v1 != v2) << std::endl; // 0
+    */
     bool operator!=(const Vector2<T>& v) { return !( x == v.x && y == v.y ); }
 
 };
