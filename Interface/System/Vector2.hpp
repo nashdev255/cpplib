@@ -102,6 +102,11 @@ class Vector2 {
 
     /**
      * [usage]
+     * Vector<int> v1(1, 2);
+     * Vector<int> v2(3, 4);
+     * v1 += v2;
+     * std::cout << v1 << std::endl; // (4, 6)
+     * 
     */
     Vector2<T> operator+=(const Vector2<T>& v) {
       x += v.x;
@@ -111,6 +116,11 @@ class Vector2 {
 
     /**
      * [usage]
+     * Vector<int> v1(1, 2);
+     * Vector<int> v2(3, 4);
+     * v1 -= v2;
+     * std::cout << v1 << std::endl; // (-2, -2)
+     * 
     */
     Vector2<T> operator-=(const Vector2<T>& v) {
       x -= v.x;
