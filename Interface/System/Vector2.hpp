@@ -12,6 +12,7 @@
 template <typename T>
 class Vector2 {
   private:
+    /* xUnit and yUnit */
     T x, y;
   
   public:
@@ -30,6 +31,7 @@ class Vector2 {
     }
 
     /**
+     * For manipulating vector * number.
      * 
      * [usage]
      * Vector<int> v = Vector<int>(1, 3) * 2;
@@ -39,6 +41,8 @@ class Vector2 {
     Vector2<T> operator*(const T i) { return Vector2<T>(i * x, i * y); }
 
     /**
+     * For manipulating number * vector.
+     * 
      * [usage]
      * Vector<int> v = 2 * Vector<int>(1, 3);
      * std::cout << 2 * Vector<int>(1, 3) << std::endl;
@@ -47,6 +51,8 @@ class Vector2 {
     friend Vector2<T> operator*(const T i, const Vector2<T>& v) { return Vector2<T>(i * v.x, i * v.y); }
 
     /**
+     * Prefix increment
+     * 
      * [usage]
      * Vector<int> v(1, 3);
      * Vector<int> v1 = ++v;
@@ -60,6 +66,8 @@ class Vector2 {
     }
 
     /**
+     * Postfix increment
+     * 
      * [usage]
      * Vector<int> v(1, 3);
      * Vector<int> v1 = v++;
@@ -74,6 +82,8 @@ class Vector2 {
     }
 
     /**
+     * Prefix increment
+     * 
      * [usage]
      * Vector<int> v(1, 3);
      * Vector<int> v1 = --v;
@@ -87,6 +97,8 @@ class Vector2 {
     }
 
     /**
+     * Postfix increment
+     * 
      * [usage]
      * Vector<int> v(1, 3);
      * Vector<int> v1 = v--;
@@ -101,6 +113,8 @@ class Vector2 {
     }
 
     /**
+     * Compound assignment operator for addition.
+     * 
      * [usage]
      * Vector<int> v1(1, 2);
      * Vector<int> v2(3, 4);
@@ -115,6 +129,8 @@ class Vector2 {
     }
 
     /**
+     * Compound assignment operator for subtraction.
+     * 
      * [usage]
      * Vector<int> v1(1, 2);
      * Vector<int> v2(3, 4);
@@ -129,6 +145,8 @@ class Vector2 {
     }
 
     /**
+     * Find the sum of two vectors.
+     * 
      * [usage]
      * Vector<int> v1(1, 2);
      * Vector<int> v2(3, 4);
@@ -139,6 +157,8 @@ class Vector2 {
     Vector2<T> operator+(const Vector2<T>& v) { return Vector2<T>(x + v.x, y + v.y); }
 
     /**
+     * Find the difference of two vectors.
+     * 
      * [usage]
      * Vector<int> v1(1, 2);
      * Vector<int> v2(3, 4);
@@ -149,6 +169,8 @@ class Vector2 {
     Vector2<T> operator-(const Vector2<T>& v) { return Vector2<T>(x - v.x, y - v.y); }
 
     /**
+     * Find the dot product of two vectors.
+     * 
      * [usage]
      * Vector<int> v1(1, 2);
      * Vector<int> v2(3, 4);
@@ -159,6 +181,8 @@ class Vector2 {
     T operator*(const Vector2<T>& v) { return x * v.x + y * v.y; }
 
     /**
+     * Add a plus sign to vector.
+     * 
      * [usage]
      * Vector<int> v1(1, 2);
      * Vector<int> v = +v1;
@@ -168,6 +192,8 @@ class Vector2 {
     Vector2<T> operator+() { return Vector2<T>(x, y); }
 
     /**
+     * Add a minus sign to vector.
+     * 
      * [usage]
      * Vector<int> v1(1, 2);
      * Vector<int> v = +v1;
@@ -177,6 +203,8 @@ class Vector2 {
     Vector2<T> operator-() { return Vector2<T>(-x, -y); }
 
     /**
+     * Judge whether vectors are equal to each other or not.
+     * 
      * [usege]
      * Vector<int> v1(1, 2);
      * Vector<int> v2(1, 2);
@@ -186,15 +214,21 @@ class Vector2 {
     bool operator==(const Vector2<T>& v) { return ( x == v.x && y == v.y ); }
 
     /**
+     * Judge whether vectors are inequal to each other or not.
+     * 
      * [usage]
      * Vector<int> v1(1, 2);
      * Vector<int> v2(1, 2);
      * std::cout << (v1 != v2) << std::endl; // 0
+     * 
     */
     bool operator!=(const Vector2<T>& v) { return !( x == v.x && y == v.y ); }
 
 };
 
+/**
+ * Major Type Classes
+*/
 using Vector2i = Vector2<int>;
 using Vector2d = Vector2<double>;
 using Vector2f = Vector2<float>;
