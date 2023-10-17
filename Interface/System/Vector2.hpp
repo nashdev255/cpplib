@@ -42,8 +42,21 @@ class Vector2 {
       x--; y--;
       return v;
     }
+    
+    Vector2<T> operator+=(const Vector2<T>& v) {
+      x += v.x;
+      y += v.y;
+      return *this;
+    }
+    Vector2<T> operator-=(const Vector2<T>& v) {
+      x -= v.x;
+      y -= v.y;
+      return *this;
+    }
 
     Vector2<T> operator+(const Vector2<T>& v) { return Vector2<T>(x + v.x, y + v.y); }
+    Vector2<T> operator-(const Vector2<T>& v) { return Vector2<T>(x - v.x, y - v.y); }
+
     T operator*(const Vector2<T>& v) { return x * v.x + y * v.y; }
 
     Vector2<T> operator+() { return Vector2<T>(x, y); }
