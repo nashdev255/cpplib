@@ -16,7 +16,10 @@ class Vector2 {
   
   public:
     Vector2(T x = 0, T y = 0) : x(x), y(y) {};
-    friend std::ostream& operator<<(std::ostream& os, const Vector2<T>& v);
+    friend std::ostream& operator<<(std::ostream& os, const Vector2<T>& v) {
+      os << '(' << v.x << ',' << v.y << ')';
+      return os;
+    }
 
     Vector2<T> operator*(const T i) { return Vector2<T>(i * x, i * y); }
     friend Vector2<T> operator*(const T i, const Vector2<T>& v) { return Vector2<T>(i * v.x, i * v.y); }
@@ -41,16 +44,10 @@ class Vector2 {
     }
 
     Vector2<T> operator+(const Vector2<T>& v) { return Vector2<T>(x + v.x, y + v.y); }
-    int operator*(const Vector2<T>& v) { return x * v.x + y * v.y; }
+    T operator*(const Vector2<T>& v) { return x * v.x + y * v.y; }
 
     Vector2<T> operator+() { return Vector2<T>(x, y); }
     Vector2<T> operator-() { return Vector2<T>(-x, -y); }
 };
-
-template <typename T>
-std::ostream& operator<<(std::ostream& os, const Vector2<T>& v) {
-  os << '(' << v.x << ',' << v.y << ')';
-  return os;
-}
 
 #endif
