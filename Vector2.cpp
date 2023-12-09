@@ -1,3 +1,4 @@
+#include <ostream>
 #include "Vector2.h"
 
 template <typename T>
@@ -16,4 +17,10 @@ constexpr nash::Vector2<T>& nash::Vector2<T>::operator=(const Vector2<U>& vec) {
   this->x = static_cast<T>(vec.x);
   this->y = static_cast<T>(vec.y);
   return this;
+}
+
+template <typename U>
+std::ostream& operator<<(const std::ostream os, const nash::Vector2<U>& vec) {
+  os << '(' << vec.x << ',' << vec.y << ')';
+  return os;
 }

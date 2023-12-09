@@ -19,6 +19,9 @@ namespace nash {
       template <typename U>
       constexpr explicit Vector2<T>& operator=(const Vector2<U>& vec);
 
+      template <typename U>
+      friend std::ostream& operator<<(const std::ostream os, const Vector2<U>& vec);
+
   };
 
   using Vector2i = Vector2<int>;
