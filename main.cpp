@@ -1,4 +1,4 @@
-#define IS_DEBUG 0
+#define IS_DEBUG 1
 
 #include <iostream>
 #include "Vector2.h"
