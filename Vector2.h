@@ -16,6 +16,9 @@ namespace nash {
 
       virtual ~Vector2();
 
+      template <typename U>
+      constexpr explicit Vector2<T>& operator=(const Vector2<U>& vec);
+
   };
 
   using Vector2i = Vector2<int>;
