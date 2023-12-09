@@ -1,5 +1,5 @@
 # executable files
 *.exe
 
-# main.cpp
-main.cpp
+# test.cpp
+test.cpp
