@@ -20,7 +20,7 @@ constexpr nash::Vector2<T>& nash::Vector2<T>::operator=(const Vector2<U>& vec) {
 }
 
 template <typename U>
-std::ostream& operator<<(const std::ostream os, const nash::Vector2<U>& vec) {
+std::ostream& operator<<(const std::ostream& os, const nash::Vector2<U>& vec) {
   os << '(' << vec.x << ',' << vec.y << ')';
   return os;
 }

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <ostream>
+
 namespace nash {
   template <typename T>
   class Vector2 {
@@ -17,10 +19,10 @@ namespace nash {
       virtual ~Vector2();
 
       template <typename U>
-      constexpr explicit Vector2<T>& operator=(const Vector2<U>& vec);
+      Vector2<T>& operator=(const Vector2<U>& vec);
 
       template <typename U>
-      friend std::ostream& operator<<(const std::ostream os, const Vector2<U>& vec);
+      friend std::ostream& operator<<(const std::ostream& os, const Vector2<U>& vec);
 
   };
 
